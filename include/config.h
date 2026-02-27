@@ -28,14 +28,14 @@
 #define RC_INVERT_YAW  0
 
 // --- PARAMETRES DE VOL (PID) ---
-#define PID_P_ROLL     1.35
-#define PID_I_ROLL     0.021
-#define PID_D_ROLL     2
+#define PID_P_ROLL     1.2
+#define PID_I_ROLL     0.003
+#define PID_D_ROLL     0.01
 #define PID_MAX_ROLL   400
 
-#define PID_P_PITCH    1.35
-#define PID_I_PITCH    0.021
-#define PID_D_PITCH    2
+#define PID_P_PITCH    1.2
+#define PID_I_PITCH    0.003
+#define PID_D_PITCH    0.01
 #define PID_MAX_PITCH  400
 
 #define PID_P_YAW      2
@@ -56,7 +56,7 @@
 
 // Plage de hauteur contrôlée par le stick (cm)
 #define ALT_MIN_HEIGHT      15.0f       // Stick bas → 15 cm
-#define ALT_MAX_HEIGHT      200.0f      // Stick haut → 200 cm (max fiable TF-Luna)
+#define ALT_MAX_HEIGHT      250.0f      // Stick haut → 200 cm (max fiable TF-Luna)
 // Sécurité coupe-moteur en AltHold
 #define ALT_HOLD_KILL_THROTTLE  1150    // Si gaz < cette valeur → coupe AltHold + retour ARMED
 
@@ -69,11 +69,11 @@
 #define ALT_SMOOTH_DEFAULT      0.01f
 
 // Gains PID Altitude par défaut
-#define PID_P_ALT           1.5f
-#define PID_I_ALT           0.05f
-#define PID_D_ALT           1.0f
+#define PID_P_ALT           1.8f
+#define PID_I_ALT           0.00160f
+#define PID_D_ALT           0.3f
 #define PID_MAX_ALT         400
-#define HOVER_THROTTLE      1530        // Gaz de hover par défaut (µs)
+#define HOVER_THROTTLE      1620       // Gaz de hover par défaut (µs)
 
 // --- OPTICAL FLOW / POSITION HOLD ---
 #define PIN_FLOW_RX         16
@@ -81,8 +81,8 @@
 #define FLOW_BAUD           115200
 #define FLOW_SCALE_FACTOR   420.0f   // Augmenté: valeurs étaient ~20x trop élevées
 #define FLOW_QUALITY_MIN    50
-#define PID_P_POS           0.10f
-#define PID_I_POS           0.01f
+#define PID_P_POS           0.25f
+#define PID_I_POS           0.0004f
 #define PID_D_POS           0.0f
 #define PID_MAX_POS_ANGLE   15.0f   // Angle max commandé par le position hold (degrés)
 #define POS_SMOOTH_DEFAULT  0.02f
